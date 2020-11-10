@@ -19,29 +19,28 @@ override func viewDidLoad() {
 }
 
 // MARK: - Download Json Method
-    // MARK: - Download Json Method
-    func downloadJson() {
-        if let jsonURL = URL(string: redditURL) {
-          jsonURL.asyncDownload { [self] data, response, error in
-            guard let data = data else {
-               //print("URLSession dataTask error:", error ?? "nil")
-                return
-            }
-            do {
-                let jsonObject = try JSONSerialization.jsonObject(with: data)
-                if let dictionary = jsonObject as? [String: Any],
-                   let dataDic = dictionary["data"] as? [String:Any],
-                   let results = dataDic["children"] as? [[String: Any]] {
-                    DispatchQueue.main.async {
-                        parseJson(results: results)
-                    }
-                }
-            } catch {
-               // print("JSONSerialization error:", error)
-            }
+func downloadJson() {
+    if let jsonURL = URL(string: redditURL) {
+      jsonURL.asyncDownload { [self] data, response, error in
+        guard let data = data else {
+           //print("URLSession dataTask error:", error ?? "nil")
+            return
         }
-       }
+        do {
+            let jsonObject = try JSONSerialization.jsonObject(with: data)
+            if let dictionary = jsonObject as? [String: Any],
+               let dataDic = dictionary["data"] as? [String:Any],
+               let results = dataDic["children"] as? [[String: Any]] {
+                DispatchQueue.main.async {
+                    parseJson(results: results)
+                }
+            }
+        } catch {
+           // print("JSONSerialization error:", error)
+      }
     }
+  }
+}
 
 // MARK: - Json Parsing Method
 func parseJson(results: [[String: Any]])  {
