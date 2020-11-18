@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="40f-KJ-RCY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="654"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwiftNewsTableViewCell" rowHeight="450" id="fac-S5-KSu" customClass="SwiftNewsTableViewCell" customModule="HomeProject" customModuleProvider="target">
@@ -79,12 +79,60 @@
                                     <outlet property="delegate" destination="Bal-gS-5ol" id="Nqt-N7-zlV"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5M-tq-s3K">
+                                <rect key="frame" x="0.0" y="742" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Swift"/>
+                                <connections>
+                                    <action selector="choosingURLWithSender:" destination="Bal-gS-5ol" eventType="touchUpInside" id="b3w-wN-BFR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUl-PT-bRX">
+                                <rect key="frame" x="0.0" y="772" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pics"/>
+                                <connections>
+                                    <action selector="choosingURLWithSender:" destination="Bal-gS-5ol" eventType="touchUpInside" id="eNH-Fj-Q7B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74c-LM-Bmk">
+                                <rect key="frame" x="0.0" y="802" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Java"/>
+                                <connections>
+                                    <action selector="choosingURLWithSender:" destination="Bal-gS-5ol" eventType="touchUpInside" id="Wkc-eg-tXS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVW-t4-y22">
+                                <rect key="frame" x="0.0" y="832" width="414" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cars"/>
+                                <connections>
+                                    <action selector="choosingURLWithSender:" destination="Bal-gS-5ol" eventType="touchUpInside" id="j1Y-cn-kKn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="reH-KM-GUk"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="40f-KJ-RCY" firstAttribute="bottom" secondItem="reH-KM-GUk" secondAttribute="bottom" id="2ZM-WI-Avk"/>
+                            <constraint firstItem="zVW-t4-y22" firstAttribute="top" secondItem="74c-LM-Bmk" secondAttribute="bottom" id="0Jo-Ky-EPC"/>
+                            <constraint firstItem="JUl-PT-bRX" firstAttribute="leading" secondItem="reH-KM-GUk" secondAttribute="leading" id="0pu-GI-Ssr"/>
+                            <constraint firstItem="q5M-tq-s3K" firstAttribute="leading" secondItem="reH-KM-GUk" secondAttribute="leading" id="8MG-RB-DaL"/>
+                            <constraint firstItem="reH-KM-GUk" firstAttribute="bottom" secondItem="zVW-t4-y22" secondAttribute="bottom" id="Fz2-jN-JOL"/>
+                            <constraint firstItem="reH-KM-GUk" firstAttribute="trailing" secondItem="zVW-t4-y22" secondAttribute="trailing" id="HAd-kK-0Si"/>
+                            <constraint firstItem="JUl-PT-bRX" firstAttribute="top" secondItem="q5M-tq-s3K" secondAttribute="bottom" id="IgL-az-NmW"/>
                             <constraint firstItem="40f-KJ-RCY" firstAttribute="leading" secondItem="reH-KM-GUk" secondAttribute="leading" id="R2p-pN-Jy9"/>
+                            <constraint firstItem="reH-KM-GUk" firstAttribute="trailing" secondItem="JUl-PT-bRX" secondAttribute="trailing" id="S2a-gN-Gp1"/>
+                            <constraint firstItem="74c-LM-Bmk" firstAttribute="leading" secondItem="reH-KM-GUk" secondAttribute="leading" id="Z7B-eb-aZj"/>
+                            <constraint firstItem="reH-KM-GUk" firstAttribute="trailing" secondItem="74c-LM-Bmk" secondAttribute="trailing" id="aCu-dt-ESt"/>
+                            <constraint firstItem="74c-LM-Bmk" firstAttribute="top" secondItem="JUl-PT-bRX" secondAttribute="bottom" id="e9T-5I-9GH"/>
+                            <constraint firstItem="q5M-tq-s3K" firstAttribute="top" secondItem="40f-KJ-RCY" secondAttribute="bottom" id="iXU-3a-33G"/>
+                            <constraint firstItem="reH-KM-GUk" firstAttribute="trailing" secondItem="q5M-tq-s3K" secondAttribute="trailing" id="rdh-29-7cg"/>
+                            <constraint firstItem="zVW-t4-y22" firstAttribute="leading" secondItem="reH-KM-GUk" secondAttribute="leading" id="slN-ji-Eac"/>
                             <constraint firstItem="40f-KJ-RCY" firstAttribute="trailing" secondItem="reH-KM-GUk" secondAttribute="trailing" id="wYe-E3-Bjd"/>
                             <constraint firstItem="40f-KJ-RCY" firstAttribute="top" secondItem="reH-KM-GUk" secondAttribute="top" id="yyx-iz-ZiP"/>
                         </constraints>
@@ -92,12 +140,16 @@
                     <navigationItem key="navigationItem" title="Swift News" id="ytI-j8-Qxu"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="button1" destination="q5M-tq-s3K" id="5ev-cN-sIb"/>
+                        <outlet property="button2" destination="JUl-PT-bRX" id="qHV-dW-u8e"/>
+                        <outlet property="button3" destination="74c-LM-Bmk" id="Ppf-85-mId"/>
+                        <outlet property="button4" destination="zVW-t4-y22" id="hsc-jd-hKb"/>
                         <outlet property="tableView" destination="40f-KJ-RCY" id="VCX-zF-UWm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gd9-Cg-r9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="38" y="-260"/>
+            <point key="canvasLocation" x="37.681159420289859" y="-260.49107142857144"/>
         </scene>
         <!--Swift News Detail View Controller-->
         <scene sceneID="ZeB-dd-p9N">

@@ -19,6 +19,7 @@
 		4A89E20B2558972A00713572 /* SwiftNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E2052558972A00713572 /* SwiftNewsTableViewCell.swift */; };
 		4A89E20C2558972A00713572 /* SwiftNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A89E2062558972A00713572 /* SwiftNewsDetailViewController.swift */; };
 		4A89E20D2558972A00713572 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A89E2072558972A00713572 /* Main.storyboard */; };
+		4ACCF96A2564A16400E1F02F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACCF9692564A16400E1F02F /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,6 @@
 		4A0E34772555E7FE007FACDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A0E347A2555E7FE007FACDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A0E347C2555E7FE007FACDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A0E34C025564F12007FACDD /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		4A0E34CE25565249007FACDD /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		4A89E1BA25578F8B00713572 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A89E2032558972A00713572 /* SwiftNewsDetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNewsDetailViewCell.swift; sourceTree = "<group>"; };
@@ -37,6 +37,7 @@
 		4A89E2052558972A00713572 /* SwiftNewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNewsTableViewCell.swift; sourceTree = "<group>"; };
 		4A89E2062558972A00713572 /* SwiftNewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNewsDetailViewController.swift; sourceTree = "<group>"; };
 		4A89E2082558972A00713572 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4ACCF9692564A16400E1F02F /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				4A0E346D2555E7FD007FACDD /* HomeProject */,
-				4AE2D54F2556534E00FBCF1F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +70,7 @@
 		4A0E346D2555E7FD007FACDD /* HomeProject */ = {
 			isa = PBXGroup;
 			children = (
+				4ACCF9682564A16400E1F02F /* Extensions */,
 				4A0E348D2555F96A007FACDD /* Models */,
 				4A89E20F2558974800713572 /* Views */,
 				4A89E2022558972A00713572 /* ViewControllers */,
@@ -120,12 +121,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4AE2D54F2556534E00FBCF1F /* Recovered References */ = {
+		4ACCF9682564A16400E1F02F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4A0E34C025564F12007FACDD /* Article.swift */,
+				4ACCF9692564A16400E1F02F /* Network.swift */,
 			);
-			name = "Recovered References";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACCF96A2564A16400E1F02F /* Network.swift in Sources */,
 				4A89E2092558972A00713572 /* SwiftNewsDetailViewCell.swift in Sources */,
 				4A89E20C2558972A00713572 /* SwiftNewsDetailViewController.swift in Sources */,
 				4A0E34D025565249007FACDD /* Article.swift in Sources */,
